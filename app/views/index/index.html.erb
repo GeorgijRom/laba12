@@ -1,0 +1,16 @@
+<%= form_with( local: true, url: "/users/login") do |form| %>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :password %>
+      <%= form.text_field :password %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit :login %>
+    </div>
+<% end %>
+<%= link_to 'Register', new_user_path %>
