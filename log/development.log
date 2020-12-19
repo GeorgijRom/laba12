@@ -2518,3 +2518,806 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-12-18 11:26:35 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/geogre/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 267ms (Views: 261.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-18 11:27:02 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-18 11:27:02 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-18 11:34:45 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-18 11:34:45 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-18 18:14:00 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/geogre/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 291ms (Views: 284.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-18 18:14:02 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-18 18:14:02 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:50:22 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/geogre/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 254ms (Views: 249.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2020-12-19 15:50:24 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hCGGPu9rxEVX+DrU//+2D0iIJ20ipE87ehi1vKfnDcM01/NtxxbsfcLIek3DiNitzIkz1IRjwAw1bqKs/fvjEQ==", "name"=>"", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", ""], ["password", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:50:25 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2020-12-19 15:50:28 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ke07iti3F+gGCG5E4wvveV4XiiIPnZALCvEcIHvHBFyZG07Z8Mo/0JM4Lt3ffIHb2haem6laHzxFhwswIdvqjg==", "name"=>"Goga", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", "Goga"], ["password", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+Redirected to http://localhost:3000/laba12/input
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/laba12/input" for ::1 at 2020-12-19 15:50:28 +0300
+Processing by Laba12Controller#input as HTML
+  Rendering laba12/input.html.erb within layouts/application
+  Rendered laba12/input.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:50:32 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (32.5ms)
+  Rendered users/new.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 61ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-19 15:50:34 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:50:37 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.2ms)
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:50:38 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:50:51 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:50:55 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:50:57 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:50:58 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:50:59 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:51:00 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.3ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:51:04 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:51:06 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.5ms)
+  Rendered users/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:52:44 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:52:47 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.7ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-19 15:52:50 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 15:53:13 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/geogre/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 272ms (Views: 263.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 15:53:14 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 41ms (Views: 29.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for ::1 at 2020-12-19 15:53:16 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:15:31 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:15:33 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:15:33 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2020-12-19 16:15:37 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXaYW5ZdIrZMu27PfFYpIX/KKdosXOdNBaRzQRerLgXnQZGAly+sdNjGDsjYfGGMWWniElzkPPT+9OMuvjNgfA==", "name"=>"Goga", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", "Goga"], ["password", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+Redirected to http://localhost:3000/laba12/input
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/laba12/input" for ::1 at 2020-12-19 16:15:37 +0300
+Processing by Laba12Controller#input as HTML
+  Rendering laba12/input.html.erb within layouts/application
+  Rendered laba12/input.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:15:41 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.5ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-19 16:15:59 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:16:04 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:26:26 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:27:04 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/geogre/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 409ms (Views: 399.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:27:09 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 59ms (Views: 36.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:27:13 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:27:41 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.1ms)
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-19 16:27:43 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:27:45 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:27:46 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:28:46 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (8.1ms)
+  Rendered users/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-12-19 16:28:55 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Vg1G8p2FEVb2QmmDmEaFJns2vLVPkNyk9iOURPFtYQHEpRednM+anCC9fpkG+9U3xImvXTDn+/KCJxB3WzO9w==", "user"=>{"name"=>"Goga", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Goga"], ["password", "123"], ["created_at", "2020-12-19 13:28:55.605510"], ["updated_at", "2020-12-19 13:28:55.605510"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 16ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/users/9" for ::1 at 2020-12-19 16:28:55 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:86
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2020-12-19 16:28:57 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:14
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:29:01 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2020-12-19 16:29:05 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RGbs1nmjY3VYOvm0rhD8MTpTUDocnjwJyMMZs1pu9Og3sNYafbnP/NUzUS/Exmcq6yLNsPd19vGtWv3Fd7gosA==", "name"=>"Goga", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", "Goga"], ["password", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+Redirected to http://localhost:3000/laba12/input
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/laba12/input" for ::1 at 2020-12-19 16:29:05 +0300
+Processing by Laba12Controller#input as HTML
+  Rendering laba12/input.html.erb within layouts/application
+  Rendered laba12/input.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/laba12/input" for ::1 at 2020-12-19 16:32:36 +0300
+Processing by Laba12Controller#input as HTML
+  Rendering laba12/input.html.erb within layouts/application
+  Rendered laba12/input.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/logout" for ::1 at 2020-12-19 16:32:46 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"logout"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:86
+Completed 404 Not Found in 11ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=logout):
+  
+app/controllers/users_controller.rb:86:in `set_user'
+Started GET "/users/logout" for ::1 at 2020-12-19 16:38:05 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/geogre/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:38:05 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 407ms (Views: 406.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/logout" for ::1 at 2020-12-19 16:38:07 +0300
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:38:07 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:48:29 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2020-12-19 16:48:35 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H/rPlix3v40hUf1AsFS4/EXOs7t4fVT/2g3UZGOs4StsLPVaKG0TBKxYVdvagiPnlL8uMZOWnge/lDASTno9cw==", "name"=>"Goga", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", "Goga"], ["password", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:70
+Redirected to http://localhost:3000/laba12/input
+Completed 302 Found in 30ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/laba12/input" for ::1 at 2020-12-19 16:48:35 +0300
+Processing by Laba12Controller#input as HTML
+  Rendering laba12/input.html.erb within layouts/application
+  Rendered laba12/input.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/logout" for ::1 at 2020-12-19 16:48:40 +0300
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:48:40 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:48:42 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:48:42 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:48:46 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:48:46 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-12-19 16:56:44 +0300
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:56:44 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:56:49 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 16:56:50 +0300
+Processing by UsersController#registration as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:56:50 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 16:56:52 +0300
+Processing by UsersController#registration as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:56:52 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 16:56:53 +0300
+Processing by UsersController#registration as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:56:53 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 16:58:05 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 16:58:07 +0300
+Processing by UsersController#registration as HTML
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.4ms)
+  Rendered users/registration.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 65ms (Views: 55.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 17:00:07 +0300
+Processing by UsersController#registration as HTML
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (470.8ms)
+Completed 500 Internal Server Error in 477ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f65dda41628>:0x00007f65dddf3640>
+Did you mean?  @user):
+    1: <%= form_with(model: user, local: true) do |form| %>
+    2:     <% if user.errors.any? %>
+    3:       <div id="error_explanation">
+    4:         <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/registration.html.erb:1:in `_app_views_users_registration_html_erb___3804575648616672578_70037745409920'
+Started GET "/users/registration" for ::1 at 2020-12-19 17:02:23 +0300
+Processing by UsersController#registration as HTML
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 108ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-12-19 17:02:42 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"il+IXmvUcaXQ0Ui9SjtwLgdnveJVg6QyrBF9+rg0NZv5ibKSb87dLF3Y4CYg7es11hYgaL5obsrJiJmMleLpww==", "user"=>{"name"=>"Alex", "password"=>"[FILTERED]"}, "commit"=>"зарегестрироваться"}
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:02:42 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:15:40 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 17:15:42 +0300
+Processing by UsersController#registration as HTML
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 62ms (Views: 45.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2020-12-19 17:15:55 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gqXNTL/iQQ7w6/ns+9reZAa2Ud5FHwfM7wQNlipvsNhs72wJA+drIduwBbCRoCskQEitkeTi21G21B+G5MbLqw==", "user"=>{"name"=>"iu", "password"=>"[FILTERED]"}, "commit"=>"зарегестрироваться"}
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:15:55 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2020-12-19 17:16:05 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nI79dR14CcujarMedP0bXEKreoCXWVGlJGa8kE6NBTzvWMe5GWKlQi5jG4UeK4BHk9rnCnyym11B/1jmY1vZZA==", "name"=>"iu", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", "iu"], ["password", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:79
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:16:05 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:18:14 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 79ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 17:18:19 +0300
+Processing by UsersController#registration as HTML
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/register" for ::1 at 2020-12-19 17:18:50 +0300
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rRmGiAPUJ8odyqsCGmia0O2ey/Z7Tb8ADVkAi+wVxWV2WZOMSrskTiQKXnQdw32LB4t1EOV1gTLwVkdFM/qJvA==", "user"=>{"name"=>"iu", "password"=>"[FILTERED]"}, "commit"=>"зарегестрироваться"}
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:18:50 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/registration" for ::1 at 2020-12-19 17:19:46 +0300
+Processing by UsersController#registration as HTML
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 70ms (Views: 52.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/register" for ::1 at 2020-12-19 17:19:50 +0300
+Processing by UsersController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bWR2xenMMXeb4hCGeDkD3b8xSqcCC9ZrbvWXm0x2dme2JGPBoKMy86Ii5fB/kuSGVST0QZwz6FmT+tBVk5k6vg==", "user"=>{"name"=>"iu", "password"=>"[FILTERED]"}, "commit"=>"зарегестрироваться"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:66
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "iu"], ["password", "123"], ["created_at", "2020-12-19 14:19:50.497070"], ["updated_at", "2020-12-19 14:19:50.497070"]]
+  ↳ app/controllers/users_controller.rb:66
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:66
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:19:50 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2020-12-19 17:20:06 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rsu9NCwhR0dqqQEF4MzajUPqnrQOzu5g7AAj38HOiardHYf4KDvrzuegqZ6KGkGWkpsDPuUlJJiJmcep7BhV8g==", "name"=>"iu", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", "iu"], ["password", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:79
+Redirected to http://localhost:3000/laba12/input
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/laba12/input" for ::1 at 2020-12-19 17:20:06 +0300
+Processing by Laba12Controller#input as HTML
+  Rendering laba12/input.html.erb within layouts/application
+  Rendered laba12/input.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/logout" for ::1 at 2020-12-19 17:20:16 +0300
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:20:16 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/laba12/input" for ::1 at 2020-12-19 17:20:30 +0300
+Processing by Laba12Controller#input as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-19 17:20:30 +0300
+Processing by IndexController#index as HTML
+  Rendering index/index.html.erb within layouts/application
+  Rendered index/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+

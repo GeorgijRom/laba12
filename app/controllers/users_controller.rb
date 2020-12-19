@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  skip_before_action :check_authorization, only: [:login]
+  skip_before_action :check_authorization, only: [:login, :registration, :register]
   # GET /users
   # GET /users.json
   def index
@@ -62,7 +62,16 @@ class UsersController < ApplicationController
   end
 
   def register
-
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to "/"
+    else
+      render :registration
+    end   
+  end
+  
+  def registration
+    @user = User.new
   end
 
   def login
@@ -78,6 +87,7 @@ class UsersController < ApplicationController
   
   def logout
     session[:user_id]=nil
+    redirect_to "/"
   end
 
   private
