@@ -10,5 +10,6 @@ class laba12ControllerTest < ActionDispatch::IntegrationTest
     get laba12_view_url
     assert_response :success
   end
-
+  test "" do
+  end
 end
