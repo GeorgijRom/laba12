@@ -12,3 +12,110 @@ Migrating to CreateUsers (20201215213048)
   [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-12-15 21:33:59.981669"], ["updated_at", "2020-12-15 21:33:59.981669"]]
   [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:40:47.917426', '2020-12-20 16:40:47.917426', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:40:47.917426', '2020-12-20 16:40:47.917426', 298486374)[0m
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+UsersFlowTest: test_can't_do_math_without_login
+-----------------------------------------------
+Started GET "/laba12/input" for 127.0.0.1 at 2020-12-20 19:40:48 +0300
+Processing by Laba12Controller#input as HTML
+Redirected to http://www.example.com/
+Filter chain halted as :check_authorization rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersFlowTest: test_registrate_and_enter
+----------------------------------------
+Started POST "/users/registration" for 127.0.0.1 at 2020-12-20 19:40:48 +0300
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:41:24.368892', '2020-12-20 16:41:24.368892', 980190962)[0m
+  [1m[36mFixture Insert (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:41:24.368892', '2020-12-20 16:41:24.368892', 298486374)[0m
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersFlowTest: test_registrate_and_enter
+----------------------------------------
+Started POST "/users/registration" for 127.0.0.1 at 2020-12-20 19:41:24 +0300
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:43:23.729205', '2020-12-20 16:43:23.729205', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:43:23.729205', '2020-12-20 16:43:23.729205', 298486374)[0m
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersFlowTest: test_registrate_and_enter
+----------------------------------------
+Started POST "/users/registration" for 127.0.0.1 at 2020-12-20 19:43:23 +0300
+Processing by UsersController#registration as HTML
+  Parameters: {"name"=>"Anfisa", "password"=>"[FILTERED]"}
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 440ms (Views: 426.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:46:28.306229', '2020-12-20 16:46:28.306229', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:46:28.306229', '2020-12-20 16:46:28.306229', 298486374)[0m
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersFlowTest: test_registrate_and_enter
+----------------------------------------
+Started POST "/users/registration" for 127.0.0.1 at 2020-12-20 19:46:28 +0300
+Processing by UsersController#registration as HTML
+  Parameters: {"name"=>"Anfisa", "password"=>"[FILTERED]"}
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 178ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+Started POST "/" for 127.0.0.1 at 2020-12-20 19:46:28 +0300
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:49:01.063837', '2020-12-20 16:49:01.063837', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2020-12-20 16:49:01.063837', '2020-12-20 16:49:01.063837', 298486374)[0m
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersFlowTest: test_registrate_and_enter
+----------------------------------------
+Started POST "/users/registration" for 127.0.0.1 at 2020-12-20 19:49:01 +0300
+Processing by UsersController#registration as HTML
+  Parameters: {"name"=>"Anfisa", "password"=>"[FILTERED]"}
+  Rendering users/registration.html.erb within layouts/application
+  Rendered users/registration.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 184ms (Views: 173.8ms | ActiveRecord: 0.0ms)
+Started POST "/users/login" for 127.0.0.1 at 2020-12-20 19:49:01 +0300
+Processing by UsersController#login as HTML
+  Parameters: {"name"=>"Anfisa", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? AND "users"."password" = ? LIMIT ?[0m  [["name", "Anfisa"], ["password", "123"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
