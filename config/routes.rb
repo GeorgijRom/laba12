@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'users/logout'
   get 'users/registration'
   post "users/register"
-  post "users/registration"
   resources :users
   get 'laba12/input'  
   get 'laba12/view'
