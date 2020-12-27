@@ -1,3 +1,4 @@
+require 'digest'
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   skip_before_action :check_authorization, only: [:login, :registration, :register]
@@ -63,20 +64,21 @@ class UsersController < ApplicationController
 
   def register
     @user = User.new(user_params)
+    @user.password = Digest::MD5.hexdigest((params[:user])[:password])
     if @user.save
-      redirect_to "/"
+      session[:user_id]=@user.id
+      redirect_to "/laba12/input"
     else
       render :registration
-    end   
+    end
   end
-  
   def registration
     @user = User.new
   end
 
   def login
     
-    user = User.find_by name: params[:name], password: params[:password]  
+    user = User.find_by name: params[:name], password: Digest::MD5.hexdigest(params[:password])
     if user.nil?
       redirect_to "/"
     else
@@ -98,6 +100,7 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :password)
+
+      params.require(:user).permit(:name)
     end
 end
